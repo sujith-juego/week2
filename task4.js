@@ -12,8 +12,11 @@ async function getapi(nam,url) {
    
     for(let i = 0;i< data.length; i++){
         if(data[i].name === nam){
-            console.log(data[i])
-        }
+            const url2 = `https://wizard-world-api.herokuapp.com/Elixirs/${data[i].id}`;
+            const response = await fetch(url2);
+            let data1 = await response.json();
+            console.log(data1)
+        } 
     }
 }
 
@@ -23,7 +26,6 @@ getapi(nam,api_url);
 
 
 // list of names present in api
-
 // Fergus Fungal Budge
 // Manegro Potion
 // Potion N. 220
