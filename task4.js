@@ -3,7 +3,7 @@
 
 
 // fetch details by name
-const yargs = require('yargs')
+
 const api_url = 'https://wizard-world-api.herokuapp.com/Elixirs';
 
 async function getapi(nam,url) {
